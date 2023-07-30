@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publication of research work, advertisement and application of jobs, publication of ground breaking and cutting edge
+                research news items, investment ,general academic and industrial news, and provision of consulting services">
+    <title>GlobaBrain - Journal Publication Website</title>
+    <link rel="shortcut icon" href="{% static 'styles/globabrain.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/bootswatch.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <script src="static/scripts/pdf.js"></script> -->
+</head>
+
+<body>
+    {% include "header.html"%}
+    {% block content %}
+    {% endblock content %}
+    {% include "footer.html"%}
+</body>
+
+<style>
+   
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    header h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+  
+
+    section {
+        padding: 20px 0;
+    }
+
+    .wrapper {
+    
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    footer {
+        color: black;
+        text-align: center;
+        padding: 10px;
+    }
+    #about {
+        background-color: #9e9a9a;
+        padding: 50px;
+    }
+
+    #aims {
+        background-color: #d0d0d0;
+        padding: 50px;
+    }
+
+    #journals {
+        background-color: #04210a9c;
+        padding: 50px;
+        color:aliceblue
+    }
+    #features {
+        background-color: #0a87239c;
+        padding: 50px;
+        color:rgb(13, 13, 14)
+    }
+    #published {
+        background-color: #04210a9c;
+        padding: 50px;
+        color:aliceblue
+    }
+    
+
+</style>

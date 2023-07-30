@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>List of Published Journals</h1>
+    {% if published_journals %}
+    <ul>
+        {% for journal in published_journals %}
+        <li><a href="{% url 'view_journal' journal.pk %}">{{ journal.title }}</a> by: {{journal.author}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Journal Available for now</p>
+    {% endif %}
+</div>
+
+<style>
+    .container li{
+        background-color:#f2f2f2;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.1);
+        width: fit-content;
+        height: auto;
+        overflow: hidden;
+        text-decoration: none;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    .container li a{
+        color:#000
+    }
+    .container h1{
+        text-align: center;
+        margin-top: 15px;
+        color: #000;
+    }
+
+    .container li{
+        list-style: none;
+        padding: 5px;
+        font-size: large;
+
+    }
+    .container p{
+        display: flex;
+        text-align: center;
+        justify-content:center ;
+        margin-top: 50px;
+
+    }
+    .container a{
+        color: rgb(35, 6, 79);
+    }
+</style>
+{% endblock content %}
