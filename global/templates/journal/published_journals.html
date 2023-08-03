@@ -1,53 +1,60 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-    <h1>List of Published Journals</h1>
-    {% if published_journals %}
-    <ul>
-        {% for journal in published_journals %}
-        <li><a href="{% url 'view_journal' journal.pk %}">{{ journal.title }}</a> by: {{journal.author}}</li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No Journal Available for now</p>
-    {% endif %}
-</div>
+<section id="published">
+    <div class="wrapper">
+        <h1>List of Published Journals</h1>
+        {% if published_journals %}
+        <ul>
+            {% for journal in published_journals %}
+            <li><a href="{% url 'view_journal' journal.pk %}">{{ journal.title }}</a> by: {{journal.author}}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No Journal Available for now</p>
+        {% endif %}
+    </div>
+</section>
 
 <style>
-    .container li{
-        background-color:#f2f2f2;
+    #published{
+         background-color: #04210a9c;
+        padding: 50px;
+        color:aliceblue
+    }
+    .wrapper li{
+        background-color:#a3c2c9;
         border-radius: 8px;
         box-shadow: rgba(0, 0, 0, 0.1);
-        width: fit-content;
+        width: 100%;
         height: auto;
         overflow: hidden;
         text-decoration: none;
         margin-top: 7px;
         margin-bottom: 7px;
     }
-    .container li a{
+    /* .wrapper li a{
         color:#000
-    }
-    .container h1{
+    } */
+    .wrapper h1{
         text-align: center;
         margin-top: 15px;
-        color: #000;
+        /* color: #000; */
     }
 
-    .container li{
+    .wrapper li{
         list-style: none;
         padding: 5px;
         font-size: large;
 
     }
-    .container p{
+    .wrapper p{
         display: flex;
         text-align: center;
         justify-content:center ;
         margin-top: 50px;
 
     }
-    .container a{
+    .wrapper a{
         color: rgb(35, 6, 79);
     }
 </style>

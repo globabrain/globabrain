@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <section id="about">
-    <div class="wrapper welcome">
-        <h1>Welcome to GlobaBrain</h1>
+    <div class="wrapper welcome ">
+        <h1 id="welcome-heading">Welcome to GlobaBrain</h1>
         <p>
             GlobaBrain is where you publish your research findings and rewarded. <br>
             We hope that you will consider being a member of GlobaBrain and publishing your research work with our
@@ -102,15 +102,47 @@
         </p>
     </div>
 </section>
+<!-- <script>
+     const welcomeHeading = document.getElementById('welcome-heading');
+     const navbarToggler = document.querySelector('.navbar-toggler');
+
+        window.addEventListener('scroll', () => {
+            const distanceFromTop = welcomeHeading.getBoundingClientRect().top;
+
+            if (distanceFromTop < 0) {
+                welcomeHeading.style.visibility = 'hidden';
+            } else {
+                welcomeHeading.style.visibility = 'visible';
+            }
+        });
+        navbarToggler.addEventListener('click', () => {
+                if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+                    welcomeHeading.style.display = 'none';
+                } else {
+                    welcomeHeading.style.display = 'block';
+                }
+            });
+</script> -->
 <style>
+    
             .welcome h1 {
                 text-align: center;
-                margin-top: 5px;
                 font-size: 40px;
                 margin-bottom: 30px;
                 position: relative;
                 animation: move-up 2s ease-in-out infinite alternate;
+                padding-top: 80px;
             }
+             @media (max-width: 767px) {
+                .navbar.welcome h1 {
+                    display: block;
+                }
+             }
+             header{
+                position: fixed;
+                z-index: 2;
+                width: 100%;
+             }
 
             @keyframes move-up {
                 0% {
