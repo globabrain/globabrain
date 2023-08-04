@@ -26,8 +26,17 @@ SECRET_KEY = str(os.getenv('SECRET_KEY', ""))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False)
 
+PROTOCOL = "http"
+DOMAIN = "localhost:8080"
 
-ALLOWED_HOSTS = []
+if not DEBUG:
+    PROTOCOL = "http"
+    DOMAIN = "globabrain.onrender.com/"
+    ALLOWED_HOSTS = ["globabrain.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://globabrain.onrender.com"]
+
+
+ALLOWED_HOSTS = ["localhost",'127.0.0.1', "0.0.0.0",'globabrain.onrender.com']
 
 
 # Application definition
