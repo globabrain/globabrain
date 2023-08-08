@@ -31,7 +31,7 @@ DOMAIN = "localhost:8080"
 
 if not DEBUG:
     PROTOCOL = "http"
-    DOMAIN = "globabrain.onrender.com/"
+    DOMAIN = "globabrain.onrender.com"
     ALLOWED_HOSTS = ["globabrain.onrender.com"]
 CSRF_TRUSTED_ORIGINS = ["https://globabrain.onrender.com"]
 
