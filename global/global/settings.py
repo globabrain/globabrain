@@ -32,11 +32,11 @@ DOMAIN = "localhost:8080"
 if not DEBUG:
     PROTOCOL = "http"
     DOMAIN = "globabrain.onrender.com"
-    ALLOWED_HOSTS = ["globabrain.onrender.com"]
-CSRF_TRUSTED_ORIGINS = ["https://globabrain.onrender.com"]
+    ALLOWED_HOSTS = ["globabrain.onrender.com","globabrain.com"]
+CSRF_TRUSTED_ORIGINS = ["https://globabrain.onrender.com","https://globabrain.com"]
 
 
-ALLOWED_HOSTS = ["localhost",'127.0.0.1', "0.0.0.0",'globabrain.onrender.com']
+ALLOWED_HOSTS = ["localhost",'127.0.0.1', "0.0.0.0",'globabrain.onrender.com','globabrain.com']
 
 
 # Application definition
