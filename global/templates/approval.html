@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+
+<section class="more">
+    <div class="moreclass">
+        <div class="morecla">
+            <h1>Journal Publication Admin Approval <br> Sercvice</h1>
+            <img class="moreimg" src="{% static 'styles/approval.jfif' %}" alt="">
+        </div>
+        <div class="morecla">
+            <h1>Description</h1>
+            <p class="description">Our Admin Approval service provides organizations with a streamlined process for
+                obtaining the necessary approvals from administrators. With this service, businesses can ensure that all
+                decisions and actions are in line with company policies and procedures. By implementing a formal
+                approval process, organizations can mitigate the risk of unauthorized actions and maintain a high level
+                of accountability within their operations.
+                This service offers a user-friendly interface that allows employees to submit requests for approval
+                directly to the designated administrators. Administrators can then review and either approve or deny
+                these requests, providing clear and concise feedback to the employees. The service also offers
+                customizable workflows, allowing organizations to tailor the approval process to their specific needs
+                and hierarchies. With our Admin Approval service, businesses can ensure that all decisions are made in a
+                formal and structured manner, minimizing the potential for errors or oversights.</p>
+                {% if user.is_authenticated %}
+                <p></p>
+                {%else%}
+                <a class="btn btn-success" href="{% url 'signup' %}">Get Started</a>
+                {% endif %}
+                <div class="button-container">
+                    <a href="{% url 'service' %}" class="btn btn-secondary back">Back</a>
+                    <a href="{% url 'submission' %}" class="btn btn-binary next">Next</a>
+                </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'globa',
     'journal',
+    'account',
+    'contact',
+    'features',
 ]
 
 MIDDLEWARE = [

@@ -16,15 +16,18 @@
 </section>
 
 <style>
+    #published h1{
+        color: black;
+    }
     #published{
-         background-color: #04210a9c;
-        padding: 50px;
-        color:aliceblue
+        padding: 15px;
+        color:gray;
     }
     .wrapper li{
-        background-color:#a3c2c9;
+        border-style: solid;
         border-radius: 8px;
-        box-shadow: rgba(0, 0, 0, 0.1);
+        box-shadow: rgba(16, 15, 15, 0.768);
+        box-sizing: border-box;
         width: 100%;
         height: auto;
         overflow: hidden;
@@ -32,12 +35,8 @@
         margin-top: 7px;
         margin-bottom: 7px;
     }
-    /* .wrapper li a{
-        color:#000
-    } */
     .wrapper h1{
         text-align: center;
-        margin-top: 15px;
         /* color: #000; */
     }
 
@@ -55,7 +54,9 @@
 
     }
     .wrapper a{
-        color: rgb(35, 6, 79);
+        text-decoration:none !important;
+        color: black;
     }
+
 </style>
 {% endblock content %}

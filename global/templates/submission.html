@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+
+<section class="more">
+    <div class="moreclass">
+        <div class="morecla">
+            <h1>Efficient Journal Submission and Approval Process</h1>
+            <img class="moreimg" src="{% static 'styles/submission.jfif' %}" alt="">
+        </div>
+        <div class="morecla">
+            <h1>Description</h1>
+            <p class="description">Our journal submission service is designed to assist researchers and academics in the
+                process of submitting their work to reputable journals for publication. With our team of experienced
+                professionals, we provide comprehensive support to ensure that your manuscript meets all the necessary
+                requirements and guidelines of the target journal. From formatting and proofreading to addressing
+                reviewer comments, we handle every aspect of the submission process, allowing you to focus on your
+                research.
+                Our service begins with a thorough assessment of your manuscript, where we identify any potential areas
+                of improvement and provide suggestions for enhancing the clarity and coherence of your work. Our skilled
+                editors then meticulously review your manuscript, ensuring that it adheres to the journal’s specific
+                formatting and style guidelines. We also offer assistance in crafting a compelling cover letter and
+                responding to reviewer comments, helping you present your research in the best possible light. With our
+                journal submission service, you can increase your chances of acceptance and save valuable time and
+                effort in the publication process.</p>
+                {% if user.is_authenticated %}
+                <p></p>
+                {%else%}
+                <a class="btn btn-success" href="{% url 'signup' %}">Get Started</a>
+                {% endif %}
+                <a href="{% url 'approval' %}" class="btn btn-secondary back">Back</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

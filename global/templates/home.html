@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+<section class="home containe">
+    <div class="headiv">
+        <h1 class="head"><span class="j">J</span>ournal Publication <br> Website: <br> Streamlining <br> Academic
+            Research</h1>
+        <p class="descrip">Welcome to Globabrain, the premier journal publication website, where authenticated users can
+            submit their journals for approval by the admin, ensuring privacy before being showcased to the public as
+            approved journals.</p>
+
+        <a class="allservic" href="{% url 'about' %}">View All Services</a>
+    </div>
+    <div class="imgdiv">
+        <img id="imgdi" src="{% static 'styles/book.jpeg' %}" alt="this image is missing" width="auto" height="auto">
+    </div>
+    
+</section>
+<h1 class="serv">Our Services</h1> <span><a class="allservictw" href="{% url 'service' %}">View All Services</a></span>
+<section class="services containe">
+    <div class="objectone">
+        <img class="objectimgone" src="{% static 'styles/draft_approval.jpg' %}" alt="">
+        <p class="objecttext">Secure Journal Publication Platform: Draft <br> Approval</p>
+        <a href="{% url 'service' %}" class="btn btn-secondary">Read More&#8594;</a>
+    </div>
+    <div class="objectwo">
+        <img class="objectimgtwo" src="{% static 'styles/approval.jfif' %}" alt="">
+        <p class="objecttext">Journal Publication Admin Approval Sercvice</p>
+        <a href="{% url 'approval' %}" class="btn btn-secondary">Read More&#8594;</a>
+    </div>
+    <div class="objecthree">
+        <img class="objectimgthree" src="{% static 'styles/submission.jfif' %}" alt="">
+        <p class="objecttext">Efficient Journal Submission and Approval Process</p>
+        <a href="{% url 'submission' %}" class="btn btn-secondary">Read More&#8594;</a>
+    </div>
+</section>
+<!-- <section class="starsec containe">
+    <div class="star">
+        <p class="starobjectone"><img src="{% static 'styles/approve.jpeg' %}" alt="" width="200px" height="250px"> </p>
+    </div>
+    <div class="starone">
+        <p class="starobjectwo">Star </p>
+    </div>
+    <div class="startwo">
+        <h2>Trusted by numerous Authors, Editors, Readers</h2>
+        <p class="starname">Fasasi Afeez </p>
+        <p class="trust">This journal publication provides a seamless and secure platform for submitting, reviewing and
+            publishing journals, ensuring privacy and timely approval for a smooth and efficient experience.</p>
+    </div>
+</section> -->
+<div class="teamer">
+    <h1 class="ourteam">Our team</h1>
+    <p id="teamid" class="ourteam">Globabrain is a team of dedicated professionals who work together to proovide a seamless
+        and efficient platform for journal publication, <br> ensuring the highest standards of authentication, approval and
+        privacy. <br> Trusted by numerous Authors, Editors, Readers</p>
+    <div class="teamsec containe">
+        <div class="teamone">
+            <img class="teamimg" src="{% static 'styles/teamm.jpg' %}" alt="">
+        </div>
+
+        <div class="teamtwo">
+            <h1 class="teamtextone">Admin <br>Team</h1>
+            <p class="teamtextone">Drawing from my exceptional technical expertise and innovative mindset, I oversee the
+                development and implementation of advanced features on our wedsite, guaranteeing a user-friendly experience
+                for all authenticatde users.</p>
+        </div>
+
+        <div class="teamthree">
+            <img class="teamimg" src="{% static 'styles/teamwork.jpg' %}" alt="">
+        </div>
+        <div class="teamfour">
+            <h1 class="teamtextwo">Support <br>Team</h1>
+            <p class="teamtextwo">With extensive knowledge and experience in publication management, I skillfully lead
+                Globabrain, ensuring seamless processes and top-notch quality in every journal publication</p>
+        </div>
+    </div>
+</div>
+<section class="happycustomers containe">
+    <div class="headiv">
+        <h1 class="head">Happy Customers</h1>
+        <p class="descrip">Our meticulous approval process ensures that only the highest quality journals are published,
+            earning the trust and admiration of our valued customers. </p>
+        <a class="allservic" href="{% url 'published_journals' %}">View All Journals</a>
+    </div>
+    <div class="happydiv">
+        <img id="happyimg" src="{% static 'styles/customer.jpg' %}" alt="this image is missing" width="450px" height="350px">
+    </div>
+</section>
+<!-- <section class="newsletter">
+        <form action="">
+            <h1 id="hsubs">Subscribe to Newsletter</h1>
+            <p class="subs">Enter your email address to register to our newsletter subscription!</p>
+            <input class="input" type="email" placeholder="Email address" required> <br>
+            <button class="sendbtn">Send</button>
+        </form>
+    </section>
+    <footer>
+        <div class="socialicon">
+            <span class="tooltip"><a class="socfb" href=""><img class="social" src="logo_fb.jpg" alt=""></a>
+                <span class="tooltip-content"><b>facebook</b></span>
+            </span>
+        </div>
+        <div class="socialicon">
+            <span class="tooltiptwo"><a href="" class="socig"><img class="social" src="logo_instagram.jpg" alt=""></a>
+                <span class="tooltip-contentwo"><b>Instagram</b></span>
+            </span>
+        </div>
+        <div class="socialicon">
+            <span class="tooltipthree"><a href="" class="soctw"><img class="social" src="logo_twitter.jpg" alt=""></a>
+                <span class="tooltip-contenthree"><b>twitter</b></span>
+            </span>
+        </div> 
+        <div class="socialicon">
+            <span class="tooltipfour"><a href="" class="socytb"><img class="social" src="youtube_logo.png" alt=""></a>
+                <span class="tooltip-contentfour"><b>YouTube</b></span>
+            </span>
+        </div> 
+        <div>
+            <a id="link" class="footerlnk" href="about.html">About Us</a>
+            <a id="linktwo" class="footerlnk" href="contactus.html">Contact Us</a>
+            <a id="linkthree" class="footerlnk" href="">FAQs</a>
+        </div>    
+            <div>
+            <span id="copyright">©2023 Globabrain. All rights Reserved</span>
+        </div>
+    </footer> -->
+</body>
+
+{% endblock content %}

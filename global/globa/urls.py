@@ -5,9 +5,13 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('about', views.about, name="about"),
+    path('', views.home, name="index"),
     path('features/', views.features, name="features"),
     path('journal/', views.journal, name="journal"),
+    path('service/', views.secure, name="service"),
+    path('submission/', views.submission, name="submission"),
+    path('approval/', views.approval, name="approval"),
 ]
 
 if settings.DEBUG:

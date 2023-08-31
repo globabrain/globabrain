@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+
+<section class="more">
+    <div class="moreclass">
+        <div class="morecla">
+            <h1>Secure Journal Publication Platform: Draft <br>Approval</h1>
+            <img class="moreimg" src="{% static 'styles/draft_approval.jpg' %}"  alt="">
+        </div>
+        <div class="morecla">
+            <h1>Description</h1>
+            <p class="description">Our Draft Publication service offers a comprehensive solution for individuals and
+                organizations seeking assistance with their writing projects. With our team of experienced writers and
+                editors, we provide a meticulous and professional approach to drafting publications. Whether you need
+                help with academic papers, research articles, or business reports, we are here to support you in
+                producing high-quality content.
+                When you choose our Draft Publication service, you can expect a thorough and systematic process. Our
+                writers will work closely with you to understand your requirements, research the topic extensively, and
+                develop a well-structured draft that meets your objectives. We pay great attention to detail, ensuring
+                that the content is cohesive, clear, and engaging. Additionally, our team of editors will review the
+                draft rigorously, checking for grammatical errors, refining the language, and offering suggestions for
+                improvement. With our formal tone of voice, we guarantee that your publication will maintain a
+                professional and authoritative demeanor, appealing to your target audience. Trust us to deliver a
+                polished and well-crafted draft that exceeds your expectations.</p>
+
+                {% if user.is_authenticated %}
+                <p></p>
+                {%else%}
+                <a class="btn btn-success" href="{% url 'signup' %}">Get Started</a>
+                {% endif %}
+                <a href="{% url 'approval' %}" class="btn btn-binary next">Next</a>
+        </div>
+    </div>
+</section>
+<!-- <section class="happycustomers">
+    <div class="headiv">
+        <h1 class="head">Happy Customers</h1>
+        <p class="descrip">Our meticulous approval process ensures that only the highest quality journals are published,
+            earning the trust and admiration of our valued customers. </p>
+        <a class="allservic" href="">View All Testimonies</a>
+    </div>
+    <div class="happydiv">
+        <img id="happyimg" src="{% static 'styles/customer.jpg' %}" alt="this image is missing" width="350px"
+            height="350px">
+    </div>
+</section> -->
+{% endblock content %}
