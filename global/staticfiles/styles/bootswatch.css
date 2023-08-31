@@ -11,7 +11,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
 
 :root,
 [data-bs-theme=light] {
@@ -4534,7 +4534,7 @@ fieldset:disabled .btn {
     --bs-navbar-toggler-border-radius: var(--bs-border-radius);
     --bs-navbar-toggler-focus-width: 0.25rem;
     --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
-    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -13984,4 +13984,4 @@ fieldset:disabled .btn {
 
 .pagination a:hover {
     text-decoration: none;
-}
+} 
