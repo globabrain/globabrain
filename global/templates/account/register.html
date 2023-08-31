@@ -37,13 +37,17 @@
             </div>
             <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
         </form>
+        <p>Already a globabrain member? <a href="{% url 'signin' %}">login here</a></p>
     </div>
-    <p>Already a globabrain member? <a href="{% url 'signin' %}">login here</a></p>
+    
 </body>
 <style>
     h2{
         text-align: center;
         text-emphasis: 50px;
+    }
+    p{
+        color: gray;
     }
 </style>
 
