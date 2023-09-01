@@ -9,14 +9,14 @@
             submit their journals for approval by the admin, ensuring privacy before being showcased to the public as
             approved journals.</p>
 
-        <a class="allservic" href="{% url 'about' %}">View All Services</a>
+        <a class="allservic btn btn-success" href="{% url 'about' %}">Know More&#8594;</a>
     </div>
     <div class="imgdiv">
         <img id="imgdi" src="{% static 'styles/book.jpeg' %}" alt="this image is missing" width="auto" height="auto">
     </div>
     
 </section>
-<h1 class="serv">Our Services</h1> <span><a class="allservictw" href="{% url 'service' %}">View All Services</a></span>
+<div class="button-container wrapper"><h1 class="our">Our Services</h1> <a href="{% url 'service' %}" class="btn btn-success bot">View All Services</a></div>
 <section class="services containe">
     <div class="objectone">
         <img class="objectimgone" src="{% static 'styles/draft_approval.jpg' %}" alt="">
@@ -62,7 +62,7 @@
             <h1 class="teamtextone">Admin <br>Team</h1>
             <p class="teamtextone">Drawing from my exceptional technical expertise and innovative mindset, I oversee the
                 development and implementation of advanced features on our wedsite, guaranteeing a user-friendly experience
-                for all authenticatde users.</p>
+                for all authenticate users.</p>
         </div>
 
         <div class="teamthree">
@@ -75,17 +75,23 @@
         </div>
     </div>
 </div>
+
+
+
 <section class="happycustomers containe">
     <div class="headiv">
         <h1 class="head">Happy Customers</h1>
         <p class="descrip">Our meticulous approval process ensures that only the highest quality journals are published,
             earning the trust and admiration of our valued customers. </p>
-        <a class="allservic" href="{% url 'published_journals' %}">View All Journals</a>
+        <a class="allservic btn btn-success" href="{% url 'published_journals' %}">View All Journals</a>
     </div>
     <div class="happydiv">
-        <img id="happyimg" src="{% static 'styles/customer.jpg' %}" alt="this image is missing" width="450px" height="350px">
+        <img id="happyimg" src="{% static 'styles/customer.jpg' %}" alt="this image is missing" >
     </div>
 </section>
+
+
+
 <!-- <section class="newsletter">
         <form action="">
             <h1 id="hsubs">Subscribe to Newsletter</h1>

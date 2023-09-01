@@ -14,10 +14,10 @@
                         <a class="nav-link" href="/">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'journal'  %}">Journals</a>
+                        <a class="nav-link" href="{% url 'about'  %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about'  %}">About</a>
+                        <a class="nav-link" href="{% url 'journal'  %}">Journals</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">

@@ -23,13 +23,12 @@
                 improvement. With our formal tone of voice, we guarantee that your publication will maintain a
                 professional and authoritative demeanor, appealing to your target audience. Trust us to deliver a
                 polished and well-crafted draft that exceeds your expectations.</p>
-
-                {% if user.is_authenticated %}
-                <p></p>
-                {%else%}
-                <a class="btn btn-success" href="{% url 'signup' %}">Get Started</a>
-                {% endif %}
-                <a href="{% url 'approval' %}" class="btn btn-binary next">Next</a>
+                {% if user.isnot_authenticated %}
+                <div class="button-container">
+                    <a class="btn btn-success" href="{% url 'signup' %}">Get Started</a>
+                    {% endif %}
+                    <a href="{% url 'approval' %}" class="btn btn-binary next">Next</a>
+                </div>
         </div>
     </div>
 </section>
