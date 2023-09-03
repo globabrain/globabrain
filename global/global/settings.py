@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'account',
     'contact',
     'features',
-    'boto3'
+    'storages'
+  
 ]
 
 MIDDLEWARE = [
